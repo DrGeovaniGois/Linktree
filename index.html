@@ -1,32 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Geovani Gois</title>
+    <title>Dr. Geovani Almeida Gois</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/099d126ed1.js" crossorigin="anonymous"></script>
     <style>
-        body {
+        * {
             margin: 0;
-            background-color: #000;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
         }
 
-        .botoes {
+        body {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: -400px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background: #18466f;
+            color: #fff;
+            line-height: 1.6
         }
 
+        a {
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        footer {
+            background: #071520;
+            padding: 20px;
+            text-align: center;
+            font-size: .9rem;
+            color: #bbb;
+        }
+
+        .topo {
+            flex: 1;
+            background-image: url('./imagens/FundoTopo.png');
+            background-size: cover;
+            padding: 30px 100px 50px 100px;
+        }
+
+        header {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .area-paciente {
+            background: #ddc25b;
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 50px;
+            font-weight: 200;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .btn {
+            background: #ddc35b;
+            color: #402214;
+            border: 2px solid #ddc35b;
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            align-self: center;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 70px 70px;
+            margin-top: 50px;
+        }
+
+        .quemTeGuiara {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .mapa {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 100px 150px 100px;
+            width: 100%;
+        }
+
+        .bemEstar {
+            display: flex;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .imgBemEstar {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            background-color: #071520;
+        }
+
+        .dicas {
+            display: flex;
+            flex-direction: column;
+            background-color: #35241f;
+            padding: 50px;
+            margin: 50px;
+            border-radius: 30px;
+        }
+
+        .btnSaibaMais {
+            align-self: center;
+            background-color: #476b94;
+            padding: 30px 100px 30px 100px;
+            font-size: 20px;
+            font-weight: 100;
+            border-radius: 30px;
+            border: #ddc25b solid 10px;
+        }
+
+        .cuidarDaMente {
+            flex: 1;
+            background-image: url('./imagens/fundoCuidarDaMente.mp4');
+            background-size: contain;
+            padding: 100px 100px 50px 100px;
+        }
+
+        .fortalecer {
+            display: flex;
+            flex: 1;
+            width: 80%;
+        }
+
+        .compartilhe {
+            display: flex;
+            flex: 1;
+            padding-top: 90px;
+            padding-left: 32%;
+        }
+
+        .atendimento {
+            flex: 1;
+            background-image: url('./imagens/fundoAtendimento.mp4');
+            background-size: contain;
+            padding: 100px 100px 50px 100px;
+        }
+
+        .telemedicina {
+            flex: 1;
+            background-color: #d0b8a5;
+            padding: 50px;
+            border-radius: 30px;
+            margin: 30px;
+
+        }
+
+        .blocoAvaliacao {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            border: #fff solid 2px;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .avaliacao {
+            background-color: #fff;
+            padding: 20px 60px 20px 60px;
+        }
+
+        .avaliacoes {
+            flex: 1;
+            background-image: url('./imagens/fundoFinal.png');
+            background-size: cover;
+        }
+        .redesSociais {
+            font-weight: 100;
+            margin: 20px 0 20px 0;
+        }
     </style>
 </head>
 
 <body>
-    <img src="./imagens/fundo.JPEG" width="100%" />
-    <div class="botoes">
-        <a href="https://drive.google.com/file/d/1N8mvGbtyq4wwA36WTSDDgRzDuEUSQyMU/view?usp=share_link"><img src="./imagens/sono.png" width="550px" height="300px" /></a>
-        <a href="https://api.whatsapp.com/send?phone=5544991046712"><img src="./imagens/consulta.png" width="550px" height="300px" /></a>
-    </div>
+    <section class="topo">
+        <header>
+            <p style="display: flex; align-self: center; font-size: 20px;">Seja bem-vinda(o)</p>
+            <a href="#" class="area-paciente" onclick="alert('Funcionalidade disponível em breve !');"><i
+                    class="fas fa-user fa-2x" style="padding: 0 10px 0 10px;"></i>ÁREA DO
+                PACIENTE</a>
+        </header>
+        <div style="display: flex; flex: 1; flex-direction: row;">
+            <div style="display: flex; flex: 1; flex-direction: column; border-top: 3px #fff solid;">
+                <img src="./imagens/logo.png" alt="Logo" width="80%">
+                <h1 style="font-size:60px; font-family: monospace; line-height: normal; padding-top: 20px;">Transforme
+                    sua vida, mude sua história!</h1>
+                <p style="font-size: 35px; font-weight: 200;">Uma jornada de <strong>autocuidado</strong> para além dos
+                    sintomas.</p>
+                <a href="#contato" class="btn">ENTRAR EM CONTATO</a>
+            </div>
+            <div style="display: flex; flex: 1.2;">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="quemTeGuiara">
+        <h2 class="title"
+            style="text-align: center; font-size: 50px; font-weight: 100; border-bottom: #fff 4px solid; align-self: center; padding: 50px 100px 0 100px; font-family: sans-serif; font-weight: 100;">
+            QUEM TE GUIARÁ</h2>
+        <div style="display: flex; margin: 100px 0 100px 0;">
+            <img src="./imagens/notebook.png" alt="Imagem"
+                style="display: flex; flex: 1; padding: 50px; align-self: center ;">
+            <div class="text" style="display: flex; flex: 2;">
+                <p
+                    style="font-size: 30px; font-weight: 100; box-shadow: -20px 30px 50px 30px #00000096; padding: 50px 30px 50px 30px; background-color: #18466faf;">
+                    O Dr. Geovani Gois dedica sua trajetória ao cuidado integral da saúde mental, unindo sólida
+                    formação, com
+                    pós-graduação em Psiquiatria e Medicina de Família e Comunidade, sendo esta conferida pela
+                    Universidade
+                    Federal do Maranhão, buscando uma <span style="color: #ddc25b; font-weight: bold;">escuta atenta e
+                        humanizada</span>. Apaixonado por ajudar pessoas a
+                    reencontrarem <span style="color: #ddc25b; font-weight: bold;">equilíbrio e propósito</span>,
+                    acredita que cada paciente tem o potencial de transformar sua
+                    própria história. Atende exclusivamente por meio da <span
+                        style="color: #ddc25b; font-weight: bold;">telemedicina</span>, oferecendo acompanhamento <span
+                        style="color: #ddc25b; font-weight: bold;">seguro,
+                        acessível e ético</span> para pacientes em todo o Brasil.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapa">
+        <div style="display: flex; flex: 1; flex-direction: column;">
+            <img src="./imagens/btnAtendimento.png" alt="atendimento ao publico">
+            <img src="./imagens/botao_Ebook.png" alt="E-book gratuito higiene do sono">
+            <a href="#contato" class="btn">DOWNLOAD<i class="fas fa-download" style="padding-left: 10px;"></i></a>
+        </div>
+        <img src="./imagens/mapa.png" alt="mapa do brasil" style="display: flex; flex: 1;">
+    </section>
+
+    <section class="bemEstar">
+        <img src="./imagens/imgSaudeMental.png" alt="A saúde mental é o alicerce da sua melhor versão."
+            style="width: 50%; padding: 50px; object-fit: contain;">
+        <div class="dicas">
+            <h1 style="font-size: 40px; font-weight: 100; line-height: 60px; text-align: center;color:#dabf57;">Dicas
+                para o bem-estar</h1>
+            <p style="font-size: 20px; font-weight: 100; margin: 50px 0 50px 0;">Rotina: estruture o dia organizando os
+                horários para trabalho, lazer e descanso. Manter hábitos simples
+                diminui sobrecarga mental e favorece a <span
+                    style="color: #ddc25b; font-weight: bold;">constância</span> dos seus propósitos. Estabeleça metas
+                reais e
+                <span style="font-weight: bold;"><span style="color: #ddc25b;">alcancáveis</span> e, lembre-se, o <span
+                        style="color: #ddc25b;">caminho</span> é tão importante quanto a chegada. </span>
+            </p>
+            <a class="btnSaibaMais">SAIBA MAIS</a>
+        </div>
+    </section>
+
+    <section class="cuidarDaMente">
+        <div class="fortalecer">
+            <img src="./imagens/fortalecer.png" alt="Cuidar da mente é fortalecer a vida">
+        </div>
+        <div class="compartilhe">
+            <img src="./imagens/compartilhe.png" alt="compartilhe com quem precisa ver isso">
+        </div>
+    </section>
+
+    <section class="atendimento">
+        <h1 style="color: #d0b8a5; text-align: center; font-size: 50px; padding-bottom: 30px;">MODALIDADE DE ATENDIMENTO
+        </h1>
+        <div style="display: flex;">
+            <div class="telemedicina">
+                <h3 style="font-size: 30px; font-weight: 100; color: #402214; padding-bottom: 20px;"><i
+                        class="fas fa-camera"></i> Telemedicina</h3>
+                <p style="font-size: 18px; font-weight: 100; color: #402214;padding-bottom: 20px;">As consultas online
+                    oferecem a praticidade do atendimento de onde você estiver, utilizando
+                    ferramentas seguras de telemedicina. Essa modalidade é especialmente útil para quem tem uma rotina
+                    corrida, mora em outra cidade ou país, ou busca mais flexibilidade no atendimento.</p>
+                <p style="font-size: 18px; font-weight: 100; color: #402214;" ß>Para garantir a eficácia e a privacidade
+                    do atendimento, é importante que seja realizado em um local
+                    tranquilo, onde você se sinta confortável e possa falar com liberdade. O ambiente deve oferecer
+                    sigilo e silêncio e, sempre que possível, o uso de fones de ouvido é recomendado para aumentar sua
+                    concentração e privacidade.</p>
+            </div>
+            <div style="flex: 1;">
+                <span></span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="avaliacoes">
+        <div
+            style="display: flex; flex: 1; justify-content: center; align-items:center; flex-direction: row; margin-top: 30px;">
+            <h1 style="font-size: 40px; font-weight: 200; color: #dfb956; margin-right: 10px;">CONFIRA A AVALIAÇÃO DOS
+            </h1>
+            <h1
+                style="font-size: 40px; font-weight: 200; background-color: #dfb956; color: #18466f; padding: 10px 20px 10px 0px;">
+                PACIENTES</h1>
+        </div>
+
+        <!--<div style="display: flex; flex: 1; justify-content: center; margin-top: 10px;">
+            <i class="fas fa-star" style="color: #dfb956; font-size: 22px;"></i>
+            <i class="fas fa-star" style="color: #dfb956; font-size: 22px;"></i>
+            <i class="fas fa-star" style="color: #dfb956; font-size: 22px;"></i>
+            <i class="fas fa-star" style="color: #dfb956; font-size: 22px;"></i>
+            <i class="fas fa-star" style="color: #dfb956; font-size: 22px;"></i>
+        </div>
+        <div class="divAvaliacao">
+            <h1 style="font-size: 160px; color: #dfb956; margin-bottom: -180px;">"</h1>
+            <div class="blocoAvaliacao">
+                <div class="avaliacao">
+                    <p style="color: #000;">Depoimentos são frases curtas das pessoas que gostam de sua marca. É uma ótima forma de convencer
+                        o público a experimentar seus serviços. (PASSANDO EM CARROSEL)</p>
+
+                    <p style="color: #dfb956; font-weight: 900; margin-top: 30px;">Identificação</p>
+                </div>
+            </div>
+            <h1 style="font-size: 160px; color: #dfb956; margin-top: -70px; text-align: end; ">"</h1>
+        </div>-->
+        <div style="margin-top: 20px;">
+
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-1e5d6ffc-c068-4a14-8e88-3ea86a82998b" data-elfsight-app-lazy></div>
+        </div>
+
+        <div style="display: flex; background-color: #dabf57; justify-content: space-between; align-items: center; padding: 20px 80px 20px 80px;">
+            <p style="color: #18466f; font-size: 15px; margin-right: 40px;">Cadastre-se e Receba novidades!</p>
+            <form style="display: flex; flex: 1; justify-content: space-between;">
+                <input type="text" placeholder="Nome completo" style="padding: 15px; border-radius: 20px; color: #402214; font-size: 15px;">
+                <input type="tel" placeholder="Telefone"  style="padding: 15px; border-radius: 20px; color: #402214; font-size: 15px;">
+                <button type="submit" 
+                style=" background-color: #476b94;
+                padding: 10px 50px 10px 50px;
+                font-size: 15px;
+                font-weight: 100;
+                border-radius: 20px;
+                border: #bf9d49 solid 5px; color: #fff;">Enviar</button>
+            </form>
+        </div>
+
+        <div style="display: flex; flex: 1; flex-direction: row; margin: 150px">
+            <h1 style=" display: flex; flex: 1;font-size:  30px; font-weight: 100;">FALE CONOSCO</h1>
+            <div style="display: flex; flex: 1; flex-direction: column;">
+                <p>Telefone: (44) 98808-1714</p>
+                <p>Email: drgeovanigois@gmail.com.br</p>
+                <div class="redesSociais">
+                    <a><i class="fab fa-facebook" style="font-size: 30px;"></i></a>
+                    <a><i class="fab fa-x-twitter" style="font-size: 30px;"></i></i></a>
+                    <a><i class="fab fa-instagram" style="font-size: 30px;"></i></a>
+                </div>
+                <a style="border: #fff solid 2px; padding: 10px 30px 10px 30px; align-self: flex-start; font-weight: 100;">CONTATO</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © Desenvolvido por U.G e L.F.W.G</p>
+    </footer>
 </body>
 
 </html>
