@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/099d126ed1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+        emailjs.init("es6JJ8oZzAiV9zmJx");
+        })();
+    </script>
     <style>
         * {
             margin: 0;
@@ -501,9 +507,9 @@
                 align-self: flex-end;
             }
 
-            .compartilhe img {
+            .compartilhe a{
                 margin-top: -50%;
-                margin-left: -80%;
+                margin-left: -100%;
             }
 
             .atendimentoConteudo {
@@ -641,31 +647,42 @@
                 padding: 40px;
                 flex: 2;
             }
+
             .telemedicina h3 {
                 text-align: left !important;
                 font-size: 30px;
             }
+
             .teleTexto {
                 font-size: 15px;
+            }
+            .compartilhe a{
+                margin-top: -50%;
+                margin-left: -80%;
             }
         }
 
         @media (min-width: 1400px) {
-            .topo{
+            .topo {
                 padding-bottom: 10%
             }
-            .quemTeGuiaraBlocoTexto{
+
+            .quemTeGuiaraBlocoTexto {
                 font-size: 25px;
             }
-            .dicasTitulo{
+
+            .dicasTitulo {
                 font-size: 45px;
             }
-            .dicasRotina{
+
+            .dicasRotina {
                 font-size: 25px;
             }
-            .btnSaibaMais{
+
+            .btnSaibaMais {
                 font-size: 25px;
             }
+
             .avaliacoesTitulo1 {
                 font-size: 35px;
             }
@@ -673,65 +690,89 @@
             .avaliacoesTitulo2 {
                 font-size: 35px;
             }
+
             .teleTexto {
                 font-size: 25px;
             }
-            .cuidarDaMente{
+
+            .cuidarDaMente {
                 padding-bottom: 20%;
             }
-            .atendimentoTitulo{
+
+            .atendimentoTitulo {
                 font-size: 35px;
             }
+
             .cadastrese p {
                 font-size: 25px !important;
             }
+
             .inputForm {
                 font-size: 25px;
             }
+
             .contato p {
                 font-size: 25px;
             }
+
             .contato a {
                 font-size: 25px;
             }
+            .compartilhe a{
+                margin-top: -50%;
+                margin-left: -50%;
+            }
         }
+
         @media (min-width: 1800px) {
-            .topo{
+            .topo {
                 padding-bottom: 10%
             }
-            .area-paciente{
+
+            .area-paciente {
                 font-size: 25px;
             }
-            header p{ 
+
+            header p {
                 font-size: 30px !important;
             }
-            .tituloHeader{
+
+            .tituloHeader {
                 font-size: 55px;
             }
-            .subTituloHeader{
+
+            .subTituloHeader {
                 font-size: 35px;
             }
-            .btn{
+
+            .btn {
                 font-size: 35px;
             }
-            .quemTeGuiaraTitulo{
+
+            .quemTeGuiaraTitulo {
                 font-size: 40px;
             }
-            .quemTeGuiaraBlocoTexto{
+
+            .quemTeGuiaraBlocoTexto {
                 font-size: 30px;
             }
-            .dicasTitulo{
+
+            .dicasTitulo {
                 font-size: 50px;
             }
-            .dicasRotina{
+
+            .dicasRotina {
                 font-size: 30px;
             }
-            .btnSaibaMais{
+
+            .btnSaibaMais {
                 font-size: 30px;
             }
-            .atendimentoTitulo{
+
+            .atendimentoTitulo {
                 font-size: 45px;
             }
+
             .avaliacoesTitulo1 {
                 font-size: 45px;
             }
@@ -739,63 +780,92 @@
             .avaliacoesTitulo2 {
                 font-size: 45px;
             }
-            
+
             .teleTexto {
                 font-size: 30px;
             }
-            .telemedicina h3{
+
+            .telemedicina h3 {
                 font-size: 40px;
             }
-            .cuidarDaMente{
+
+            .cuidarDaMente {
                 padding-bottom: 35%;
             }
+            .compartilhe a{
+                margin-top: -50%;
+                margin-left: -30%;
+            }
         }
+
         @media (min-width: 2500px) {
-            .tituloHeader{
+            .tituloHeader {
                 font-size: 65px;
             }
-            .subTituloHeader{
+
+            .subTituloHeader {
                 font-size: 40px;
             }
-            .quemTeGuiaraBlocoTexto{
+
+            .quemTeGuiaraBlocoTexto {
                 font-size: 40px;
             }
-            .quemTeGuiaraTitulo{
+
+            .quemTeGuiaraTitulo {
                 font-size: 50px;
             }
-            .dicasTitulo{
+
+            .dicasTitulo {
                 font-size: 55px;
             }
-            .dicasRotina{
+
+            .dicasRotina {
                 font-size: 40px;
             }
-            .dicas{
+
+            .dicas {
                 padding: 50px;
             }
-            .btnSaibaMais{
+
+            .btnSaibaMais {
                 font-size: 35px;
             }
-            .cuidarDaMente img{
+
+            .cuidarDaMente img {
                 width: 100%;
             }
-            .cuidarDaMente{
+
+            .cuidarDaMente {
                 padding-bottom: 40%;
             }
-            .atendimentoTitulo{
+
+            .atendimentoTitulo {
                 font-size: 60px;
             }
+
             .teleTexto {
                 font-size: 40px;
             }
-            .telemedicina h3{
+
+            .telemedicina h3 {
                 font-size: 50px;
             }
+
             .avaliacoesTitulo1 {
                 font-size: 55px;
             }
 
             .avaliacoesTitulo2 {
                 font-size: 55px;
+            }
+
+            .compartilhe video{
+                height: 100vh;
+            }
+
+            .compartilhe a{
+                margin-bottom: 60%;
+                margin-right: 90%;
             }
         }
     </style>
@@ -815,7 +885,7 @@
                 <h1 class="tituloHeader">Transforme sua vida, mude sua história!</h1>
                 <p class="subTituloHeader">Uma jornada de <strong>autocuidado</strong> para além dos
                     sintomas.</p>
-                <a href="#contato" class="btn">ENTRAR EM CONTATO</a>
+                <a href="https://wa.me/message/RIEIUBMUR7W6D1" class="btn">ENTRAR EM CONTATO</a>
             </div>
             <div class="divOcupaEspaco">
 
@@ -848,9 +918,12 @@
 
     <section class="mapa">
         <div style="display: flex; flex: 1; flex-direction: column;">
-            <img src="./btnAtendimento.png" alt="atendimento ao publico">
-            <img src="./botao_Ebook.png" alt="E-book gratuito higiene do sono">
-            <a href="#contato" class="MapaBtn">DOWNLOAD<i class="fas fa-download" style="padding-left: 10px;"></i></a>
+            <a href="https://wa.me/message/RIEIUBMUR7W6D1"><img src="./btnAtendimento.png"
+                    alt="atendimento ao publico"></a>
+            <a href="https://drive.google.com/file/d/1nGVkPD2wrJy1-beSMPP4SdfI_Gt72P40/view?usp=share_link"><img
+                    src="./botao_Ebook.png" alt="E-book gratuito higiene do sono"></a>
+            <a href="https://drive.google.com/file/d/1nGVkPD2wrJy1-beSMPP4SdfI_Gt72P40/view?usp=share_link"
+                class="MapaBtn">DOWNLOAD<i class="fas fa-download" style="padding-left: 10px;"></i></a>
         </div>
         <img src="./mapa.png" alt="mapa do brasil" style="display: flex; flex: 1;">
     </section>
@@ -868,7 +941,7 @@
                 <span style="font-weight: bold;"><span style="color: #ddc25b;">alcancáveis</span> e, lembre-se, o <span
                         style="color: #ddc25b;">caminho</span> é tão importante quanto a chegada. </span>
             </p>
-            <a class="btnSaibaMais">SAIBA MAIS</a>
+            <a class="btnSaibaMais" href="https://www.instagram.com/geovanigoisdoc/">SAIBA MAIS</a>
         </div>
     </section>
 
@@ -877,10 +950,13 @@
             <img src="./fortalecer.png" alt="Cuidar da mente é fortalecer a vida">
         </div>
         <div class="compartilhe">
-            <video autoplay muted loop>
+
+            <video autoplay loop>
                 <source src="./videoCuidarDaMente.mp4" type="video/mp4">
             </video>
-            <img src="./compartilhe.png" alt="compartilhe com quem precisa ver isso">
+            <a href="https://www.instagram.com/geovanigoisdoc/">
+                <img src="./compartilhe.png" alt="compartilhe com quem precisa ver isso">
+            </a>
         </div>
     </section>
 
@@ -941,9 +1017,9 @@
 
         <div class="cadastrese">
             <p style="color: #18466f; font-size: 15px;">Cadastre-se e Receba novidades!</p>
-            <form>
-                <input type="text" placeholder="Nome completo" class="inputForm">
-                <input type="tel" placeholder="Telefone" class="inputForm">
+            <form id="formulario">
+                <input type="text" placeholder="Nome completo" class="inputForm" id="nome" required>
+                <input type="tel" placeholder="Telefone" class="inputForm" id="telefone" required>
                 <button type="submit" class="btnSaibaMais" style="width: 100%;">Enviar</button>
             </form>
         </div>
@@ -951,14 +1027,14 @@
         <div class="contato">
             <h1 style=" display: flex; flex: 1;font-size:  30px; font-weight: 100;">FALE CONOSCO</h1>
             <div style="display: flex; flex: 1; flex-direction: column;">
-                <p>Telefone: (44) 98808-1714</p>
-                <p>Email: drgeovanigois@gmail.com.br</p>
-                <div class="redesSociais">
+                <p>Telefone/WhatsApp: 44 98808-1714</p>
+                <p>E-mail: drgeovanigois@gmail.com</p>
+                <p>Youtube: www.youtube.com/@Dr.GeovaniAlmeidaGois</p>
+                <!--<div class="redesSociais">
                     <a><i class="fab fa-facebook" style="font-size: 30px;"></i></a>
                     <a><i class="fa-brands fa-x-twitter" style="font-size: 30px;"></i></i></a>
                     <a><i class="fab fa-instagram" style="font-size: 30px;"></i></a>
-                </div>
-                <a style="border: #fff solid 2px; padding: 10px 30px 10px 30px;  font-weight: 100;">CONTATO</a>
+                </div>-->
             </div>
         </div>
     </section>
@@ -966,6 +1042,26 @@
     <footer>
         <p>Copyright © Desenvolvido por U.G e L.F.W.G</p>
     </footer>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+          event.preventDefault();
+    
+          // Pegando os valores do formulário
+          const params = {
+            nome: document.getElementById("nome").value,
+            telefone: document.getElementById("telefone").value
+          };
+    
+          // Enviando pelo EmailJS
+          emailjs.send("service_96ahl2s", "template_7ivm7pl", params)
+            .then(function(response) {
+              alert("✅ Email enviado com sucesso!");
+            }, function(error) {
+              alert("❌ Erro ao enviar: " + JSON.stringify(error));
+            });
+        });
+      </script>
 </body>
 
 </html>
