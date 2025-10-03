@@ -11,9 +11,14 @@
     <script src="https://kit.fontawesome.com/099d126ed1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        (function(){
-        emailjs.init("es6JJ8oZzAiV9zmJx");
+        (function () {
+            emailjs.init("es6JJ8oZzAiV9zmJx");
         })();
+        window.addEventListener("load", function () {
+            const video = document.getElementById("vidCM");
+            video.muted = false;  // garante autoplay
+            video.play();
+        });
     </script>
     <style>
         * {
@@ -39,6 +44,8 @@
 
         img {
             max-width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         footer {
@@ -409,7 +416,8 @@
         .contato div a {
             align-self: center;
         }
-        .link{
+
+        .link {
             text-decoration: none;
             color: #fff;
         }
@@ -511,7 +519,7 @@
                 align-self: flex-end;
             }
 
-            .compartilhe a{
+            .compartilhe a {
                 margin-top: -50%;
                 margin-left: -100%;
             }
@@ -660,7 +668,8 @@
             .teleTexto {
                 font-size: 15px;
             }
-            .compartilhe a{
+
+            .compartilhe a {
                 margin-top: -50%;
                 margin-left: -80%;
             }
@@ -722,7 +731,8 @@
             .contato a {
                 font-size: 25px;
             }
-            .compartilhe a{
+
+            .compartilhe a {
                 margin-top: -50%;
                 margin-left: -50%;
             }
@@ -796,7 +806,8 @@
             .cuidarDaMente {
                 padding-bottom: 35%;
             }
-            .compartilhe a{
+
+            .compartilhe a {
                 margin-top: -50%;
                 margin-left: -30%;
             }
@@ -863,11 +874,11 @@
                 font-size: 55px;
             }
 
-            .compartilhe video{
+            .compartilhe video {
                 height: 100vh;
             }
 
-            .compartilhe a{
+            .compartilhe a {
                 margin-bottom: 60%;
                 margin-right: 90%;
             }
@@ -887,7 +898,8 @@
             <div style="display: flex; flex: 1; flex-direction: column; border-top: 3px #fff solid;">
                 <img src="./logo.png" alt="Logo" class="logoTopo">
                 <h1 class="tituloHeader">Transforme sua vida, mude sua história!</h1>
-                <p class="subTituloHeader">Uma jornada de <span style="font-weight: 900;">autocuidado</span> para além dos
+                <p class="subTituloHeader">Uma jornada de <span style="font-weight: 900;">autocuidado</span> para além
+                    dos
                     sintomas.</p>
                 <a href="https://wa.me/message/RIEIUBMUR7W6D1" class="btn">ENTRAR EM CONTATO</a>
             </div>
@@ -955,7 +967,7 @@
         </div>
         <div class="compartilhe">
 
-            <video autoplay loop>
+            <video autoplay loop playsinline id="vidCM">
                 <source src="./videoCuidarDaMente.mp4" type="video/mp4">
             </video>
             <a href="https://www.instagram.com/geovanigoisdoc/">
@@ -980,7 +992,7 @@
                     concentração e privacidade.</p>
             </div>
             <div class="atendimentoVideo">
-                <video autoplay muted loop>
+                <video autoplay muted loop playsinline>
                     <source src="./videoAtendimento.mp4" type="video/mp4">
                 </video>
             </div>
@@ -1033,8 +1045,10 @@
             <div style="display: flex; flex: 1; flex-direction: column;">
                 <p>Telefone/WhatsApp: <a class="link" href="tel:44988081714">44 98808-1714</a></p>
                 <p>E-mail: <a class="link" href="mailto:drgeovanigois@gmail.com">drgeovanigois@gmail.com</a></p>
-                <p>Youtube: <a class="link" href="https://www.youtube.com/@Dr.GeovaniAlmeidaGois" target="_blank">www.youtube.com/@Dr.GeovaniAlmeidaGois</a></p>
-                <p>instagram: <a class="link" href="https://www.instagram.com/geovanigoisdoc" target="_blank">www.instagram.com/geovanigoisdoc</a></p>
+                <p>Youtube: <a class="link" href="https://www.youtube.com/@Dr.GeovaniAlmeidaGois"
+                        target="_blank">www.youtube.com/@Dr.GeovaniAlmeidaGois</a></p>
+                <p>instagram: <a class="link" href="https://www.instagram.com/geovanigoisdoc"
+                        target="_blank">www.instagram.com/geovanigoisdoc</a></p>
                 <!--<div class="redesSociais">
                     <a><i class="fab fa-facebook" style="font-size: 30px;"></i></a>
                     <a><i class="fa-brands fa-x-twitter" style="font-size: 30px;"></i></i></a>
@@ -1049,24 +1063,24 @@
     </footer>
 
     <script>
-        document.getElementById("formulario").addEventListener("submit", function(event) {
-          event.preventDefault();
-    
-          // Pegando os valores do formulário
-          const params = {
-            nome: document.getElementById("nome").value,
-            telefone: document.getElementById("telefone").value
-          };
-    
-          // Enviando pelo EmailJS
-          emailjs.send("service_96ahl2s", "template_7ivm7pl", params)
-            .then(function(response) {
-              alert("✅ Email enviado com sucesso!");
-            }, function(error) {
-              alert("❌ Erro ao enviar: " + JSON.stringify(error));
-            });
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Pegando os valores do formulário
+            const params = {
+                nome: document.getElementById("nome").value,
+                telefone: document.getElementById("telefone").value
+            };
+
+            // Enviando pelo EmailJS
+            emailjs.send("service_96ahl2s", "template_7ivm7pl", params)
+                .then(function (response) {
+                    alert("✅ Email enviado com sucesso!");
+                }, function (error) {
+                    alert("❌ Erro ao enviar: " + JSON.stringify(error));
+                });
         });
-      </script>
+    </script>
 </body>
 
 </html>
